@@ -23,26 +23,31 @@ options = []
 for i, l in enumerate(st.session_state["list_list"]):
      options.append(l)
 
-    # Add Tasks
-        
-    
 
     # Display current lists
 st.sidebar.markdown("Current Lists:")
 selected_list = st.sidebar.selectbox("", options)
 
-    # Add tasks to selected list, code used from video
+    # Add tasks
 task_input = st.text_input("Add Task:")
 if st.button("Add Task"):
     if task_input:
         st.session_state["task_list"].append(task_input)
+        task_lists[selected_list] = task_input
+
+st.markdown(f"{selected_list} Tasks:")
 
 if "task_list" not in st.session_state:
     st.session_state["task_list"] = []
 
-for i, t in enumerate(st.session_state["task_list"]):
-    st.checkbox(f"{i+1}: {t}")
+    # Display tasks for the selected list
 
+if selected_list in task_lists:
+    tasks = task_lists[selected_list]
+    for i, t in enumerate(st.session_state["task_list"]):
+        st.checkbox(f"{i+1}: {t}")
+            
+        
 ## get a way to remove checkboxes
 ## get them in list!
 # then youre done
