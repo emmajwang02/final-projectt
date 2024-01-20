@@ -1,6 +1,8 @@
 import streamlit as st
 
-st.title('Welcome to your dashboard!')
+st.title('This is my final projedt!')
+
+st.write("This is just an introductory page...")
 
     
 

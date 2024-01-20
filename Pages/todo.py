@@ -30,10 +30,11 @@ selected_list = st.sidebar.selectbox("", options)
 
     # Add tasks
 task_input = st.text_input("Add Task:")
-if st.button("Add Task"):
+if st.button("Add Task") and task_input:
     if task_input:
         st.session_state["task_list"].append(task_input)
         task_lists[selected_list] = task_input
+
 
 st.markdown(f"{selected_list} Tasks:")
 
@@ -47,11 +48,6 @@ if selected_list in task_lists:
     for i, t in enumerate(st.session_state["task_list"]):
         st.checkbox(f"{i+1}: {t}")
             
-        
-## get a way to remove checkboxes
-## get them in list!
-# then youre done
-
 
 
 

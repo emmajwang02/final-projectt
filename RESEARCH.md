@@ -14,6 +14,22 @@ Wesbite: HTML Tables
 Source: https://www.w3schools.com/html/html_tables.asp
 Reason: Formatting calendar table
 
+Website: datetime - Basic date and time types
+Source: https://docs.python.org/3/library/datetime.html
+Reason: Thought datetime was a helpful module for the calendar webpage
+
+Website: calendar - General calendar-related functions
+Source: https://docs.python.org/3/library/calendar.html#calendar.month
+Reason: Needed a source with calendar's functions
+
+Website: Enumerate() in python
+Source: https://www.geeksforgeeks.org/enumerate-in-python/
+Reason: Needed to figure out how to use enumerate for the to-do list
+
+Website: How to add a default date in streamlit date_input
+Source: https://stackoverflow.com/questions/73240700/how-to-add-a-default-date-in-streamlit-date-input
+Reason: Wanted to get a default date for the daily calendar
+
 
 
 
