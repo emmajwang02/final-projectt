@@ -34,6 +34,10 @@ Website: How to add a default date in streamlit date_input
 Source: https://stackoverflow.com/questions/73240700/how-to-add-a-default-date-in-streamlit-date-input
 Reason: Wanted to get a default date for the daily calendar
 
+Website: ChatGPT
+Source: https://chat.openai.com/
+Reason: Debugging parts of code
+
 
 
 
