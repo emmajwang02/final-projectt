@@ -19,6 +19,8 @@ with daily:
        
        st.write("Today's date is:", selectedDate)
 
+        #code logic from https://www.youtube.com/watch?v=frWARrEczb4
+
        userDailyEvent = st.text_input("Enter an event for today: ")
        if st.button("Add Daily Event") and userDailyEvent:
                 st.session_state["events_list"].append(userDailyEvent)
