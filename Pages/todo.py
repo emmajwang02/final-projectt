@@ -2,10 +2,8 @@ import streamlit as st
 
 st.title("To-Do List App")
 
- # Create a dictionary to store tasks for each list
 task_lists = {}
 
-# Sidebar for creating new lists
 list_name = st.sidebar.text_input("Enter List Name:")
 if st.sidebar.button("Create List") and list_name:
      if list_name:
@@ -24,11 +22,9 @@ for i, l in enumerate(st.session_state["list_list"]):
      options.append(l)
 
 
-    # Display current lists
 st.sidebar.markdown("Current Lists:")
 selected_list = st.sidebar.selectbox("", options)
 
-    # Add tasks
 task_input = st.text_input("Add Task:")
 if st.button("Add Task") and task_input:
     if task_input:
@@ -41,7 +37,6 @@ st.markdown(f"{selected_list} Tasks:")
 if "task_list" not in st.session_state:
     st.session_state["task_list"] = []
 
-    # Display tasks for the selected list
 
 if selected_list in task_lists:
     tasks = task_lists[selected_list]

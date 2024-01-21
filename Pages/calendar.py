@@ -15,9 +15,9 @@ with daily:
 
        todayDay = date.today()
        
-       selected_date = st.date_input("Select a date:", todayDay)
+       selectedDate = st.date_input("Select a date:", todayDay)
        
-       st.write("Today's date is:", selected_date)
+       st.write("Today's date is:", selectedDate)
 
        userDailyEvent = st.text_input("Enter an event for today: ")
        if st.button("Add Daily Event") and userDailyEvent:
@@ -38,30 +38,30 @@ with daily:
 
  
 with weekly:
-        def generate_weekly_calendar(start_day):
-                days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-                current_day_index = days_of_week.index(start_day)
+        def myWeeklyCalendar(start_day):
+                daysWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                currentDayIndex = daysWeek.index(start_day)
                 week_calendar = []
 
                 for i in range(7):
-                        week_calendar.append((days_of_week[current_day_index],))
-                        current_day_index = (current_day_index + 1) % 7
+                        week_calendar.append((daysWeek[currentDayIndex],))
+                        currentDayIndex = (currentDayIndex + 1) % 7
 
                 return week_calendar
 
         st.title("Weekly Calendar")
 
 
-        selected_day = st.selectbox("Select weekday:", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
+        selectedDay = st.selectbox("Select weekday:", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
 
-        weekly_calendar = generate_weekly_calendar(selected_day)
+        weekly_calendar = myWeeklyCalendar(selectedDay)
 
         st.write("Weekly Calendar for :")
         for day in weekly_calendar:
                 st.write(f"{day[0]}")
                 
 with monthly:     
-        def generate_monthly_calendar(year, month):
+        def myMonthlyCalendar(year, month):
                 cal = calendar.monthcalendar(year, month)
                 header = calendar.month_name[month] + " " + str(year)
 
@@ -114,7 +114,7 @@ with monthly:
 
 
 
-        calendar_html = generate_monthly_calendar(year, month)
+        calendar_html = myMonthlyCalendar(year, month)
         st.markdown(calendar_html, unsafe_allow_html=True)
 
  
