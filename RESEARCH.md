@@ -1,3 +1,7 @@
+Website: Installation - Streamlit
+Soure: https://docs.streamlit.io/get-started/installation
+Reason: Had to learn how to import Streamlit
+
 Website: Streamlit API Reference
 Source: https://docs.streamlit.io/library/api-reference
 Reason: Needed to use some of Streamlit’s web app building devices
