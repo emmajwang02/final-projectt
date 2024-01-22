@@ -28,7 +28,7 @@ def displayReminders():
         if completed_tasks:
             st.success("Task(s) completed:")
             for task in completed_tasks:
-                st.write(f"- {task}")
+                st.write(f"{task}")
 
 def removeReminders():
     st.session_state.reminders = [task for task in st.session_state.reminders if not task['Completed']]

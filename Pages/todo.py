@@ -5,6 +5,7 @@ st.title("To-Do List App")
 task_lists = {}
 
 #code logic from Source: https://www.youtube.com/watch?v=frWARrEczb4
+#list addition and removal
 
 list_name = st.sidebar.text_input("Enter List Name:")
 if st.sidebar.button("Create List") and list_name:
@@ -26,6 +27,8 @@ for i, l in enumerate(st.session_state["list_list"]):
 
 st.sidebar.markdown("Current Lists:")
 selected_list = st.sidebar.selectbox("", options)
+
+#add task to a specific list
 
 task_input = st.text_input("Add Task:")
 if st.button("Add Task") and task_input:
