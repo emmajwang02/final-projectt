@@ -19,6 +19,8 @@ if st.sidebar.button("Delete List") and list_name:
 if "list_list" not in st.session_state:
      st.session_state["list_list"] = []
 
+#idk this just helped print the checkbox
+
 options = []
 
 for i, l in enumerate(st.session_state["list_list"]):
@@ -28,7 +30,7 @@ for i, l in enumerate(st.session_state["list_list"]):
 st.sidebar.markdown("Current Lists:")
 selected_list = st.sidebar.selectbox("", options)
 
-#add task to a specific list
+#add task to a specific list when the button is pressed, logic is when button = true, task_input added to list and added to dicitonary as a value (the selected list is a key)
 
 task_input = st.text_input("Add Task:")
 if st.button("Add Task") and task_input:
@@ -42,9 +44,8 @@ st.markdown(f"{selected_list} Tasks:")
 if "task_list" not in st.session_state:
     st.session_state["task_list"] = []
 
-
+#if the selectedlist is in the dict, task_lists, loop begins and the tasks in the list start printing
 if selected_list in task_lists:
-    tasks = task_lists[selected_list]
     for i, t in enumerate(st.session_state["task_list"]):
         st.checkbox(f"{i+1}: {t}")
             
