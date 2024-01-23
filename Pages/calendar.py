@@ -22,7 +22,7 @@ with daily:
        st.write("Today's date is:", selectedDate)
 
         #code logic from https://www.youtube.com/watch?v=frWARrEczb4
-        #button for adding an event to the day, to a lust
+        #button for adding an event to the day, to a list
 
        userDailyEvent = st.text_input("Enter an event for today: ")
        if st.button("Add Daily Event") and userDailyEvent:
